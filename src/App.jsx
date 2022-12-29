@@ -8,10 +8,10 @@ import PopularMovie from './component/PopularMovie'
 function App() {
   return (
     <div className="App">
-      {/* <UseEffect /> */}
+      <UseEffect />
       <FetchData />
       <PopularMovie />
-      
+
 
     </div>
   )

@@ -1,39 +1,13 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+
 function PopularMovie (props) {
-    const [movieDetails, setMovieDetails] = useState(null)
-
-    const API_ENDPOINT = 'https://www.themoviedb.org/t/p/w220_and_h330_face/';
-
-    // const getPoster = (posterPath) => {
-    //     return `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`
-    // }
-    useEffect(
-        () => {
-            // Logic here
-            async function getData() {
-                const response = await fetch(API_ENDPOINT)
-                const data = await response.json()
-
-                // console.log(data)
-                setMovieDetails(data)
-            }
-            getData()
-        },
-        []
-    )
-    // console.log(props)
 
     return (
         <>
-        <div className="movies">
-
-        <h4>{props.title}</h4>
-        <p>{props.overview}</p>
-        {
-            movieDetails &&
-        <img src={movieDetails.poster_path} />
-        }
-
+        <div className="w-96 inline-flex flex-col last-of-type:hidden">
+            <img className="my-4 m-auto" src={(`https://www.themoviedb.org/t/p/w220_and_h330_face/${props.poster_path}`)} />
+            <h4 className="text-3xl mb-2">{props.title}</h4>
+            <p className=" w-80 m-auto">{props.overview}</p>
         </div>
         </>
     )
