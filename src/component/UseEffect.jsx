@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 function UseEffect() {
 return (
     <div>
-        <h1>Popular Movies (19?)</h1>
+        <h1>Top 20 Popular Movies</h1>
     </div>
 )
 }

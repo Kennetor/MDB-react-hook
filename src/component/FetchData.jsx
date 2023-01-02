@@ -12,6 +12,7 @@ function FetchData() {
             async function getData() {
                 const response = await fetch(API_ENDPOINT)
                 const data = await response.json()
+                console.log(data)
                 setData(data)
             }
             getData()
